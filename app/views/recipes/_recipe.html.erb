@@ -1,0 +1,13 @@
+<tr> 
+  <td class="recipe">
+    <span class="title"><%= recipe.title %> </span>
+    <span class="servings">(Serves <%=recipe.num_served%>)</span><br/>
+    <span class="fieldname">Ingredients:</span>
+    <span class="instructions"><%= recipe.ingredients %></span><br/>
+    <span class="fieldname">Instructions:</span>
+    <span class="instructions"><%= recipe.instructions %></span><br/>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(recipe.created_at) %> ago. 
+    </span>
+  </td>
+</tr>

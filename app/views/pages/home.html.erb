@@ -1,0 +1,23 @@
+
+<% if signed_in? %> 
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main"> 
+        <h1 class="recipe">What's cooking?</h1> 
+        <%= render 'shared/recipe_form' %>
+        <%= render 'shared/recipebox' %>
+      </td> 
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %> 
+      </td>
+    </tr>
+  </table>
+<% else %>
+  <h1>
+    Join Us!
+  </h1>
+  <p>
+    Are you a recipe monster? A chef in the making? A sucker for a teaspoon? Come on in and join us!
+  </p>
+  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<% end %>

@@ -1,0 +1,16 @@
+<tr> 
+  <td class="gravatar">
+    <%= link_to gravatar_for(recipebox_item.user), recipebox_item.user %> 
+  </td>
+  <td class="recipe"> 
+    <span class="user">
+      <%= link_to recipebox_item.title, recipebox_item.user %> 
+    </span>
+    <span class="instructions">
+      Serves <%= recipebox_item.num_served %>
+    </span> 
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(recipebox_item.created_at) %> ago. 
+    </span>
+  </td>
+</tr>

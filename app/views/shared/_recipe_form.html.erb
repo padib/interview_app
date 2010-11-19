@@ -1,0 +1,22 @@
+<%= form_for @recipe do |f| %> 
+  <%= render 'shared/error_messages', :object => f.object %> 
+  <div class="field">
+    Title:
+    <%= f.text_field :title %> 
+  </div>
+  <div class="field">
+    Servings: 
+    <%= f.text_field :num_served %> 
+  </div>
+  <div class="field">
+    Ingredients: 
+    <%= f.text_area :ingredients %> 
+  </div>
+  <div class="field">
+    Instructions:
+    <%= f.text_area :instructions %> 
+  </div>
+  <div class="actions"> 
+    <%= f.submit "Cook!" %>
+  </div> 
+<% end %>

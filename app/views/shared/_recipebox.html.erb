@@ -1,0 +1,7 @@
+<% unless @recipebox_items.empty? %> 
+  <table class="recipes" summary="User recipes">
+    <%= render :partial => 'shared/recipebox_item', 
+                :collection => @recipebox_items %>
+  </table>
+  <%= will_paginate @recipebox_items %> 
+<% end %>

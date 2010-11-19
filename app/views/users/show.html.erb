@@ -1,0 +1,19 @@
+<table class="profile" summary="Profile information"> 
+  <tr>
+    <td class="main"> 
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %> 
+      </h1>
+      <% unless @user.recipes.empty? %> 
+        <table class="recipes" summary="User recipes">
+        <%= render @recipes %> </table>
+        <%= will_paginate @recipes %> 
+      <% end %>
+    </td> 
+    <td class="sidebar round">
+      <strong>Name</strong> <%= link_to @user.name, @user %><br/>
+      <strong>Recipes</strong> <%= @user.recipes.count %>
+    </td>
+  </tr> 
+</table>
